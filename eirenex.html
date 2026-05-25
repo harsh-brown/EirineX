@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EireneX — Enterprise AI</title>
+  <meta name="description" content="EireneX helps enterprises adopt AI in a secure, practical, lightweight way. On-prem capable. 119+ models. $1,000 setup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       CSS VARIABLES & RESET
+    ============================================= */
+    :root {
+      --color-ink:       #1a1a1a;
+      --color-ink-soft:  #4a4a4a;
+      --color-ink-muted: #888;
+      --color-canvas:    #fafaf8;
+      --color-surface:   #f3f2ef;
+      --color-border:    #e2e0db;
+      --color-accent:    #2d5be3;
+      --color-accent-dk: #1e44c0;
+      --color-accent-lt: #edf0fc;
+      --color-warm:      #c8a96e;
+
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --size-xs:   0.75rem;
+      --size-sm:   0.875rem;
+      --size-base: 1rem;
+      --size-md:   1.125rem;
+      --size-lg:   1.375rem;
+      --size-xl:   1.75rem;
+      --size-2xl:  2.25rem;
+      --size-3xl:  3rem;
+      --size-4xl:  4rem;
+      --size-5xl:  5.5rem;
+
+      --space-1: 0.5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2rem;
+      --space-5: 3rem;
+      --space-6: 4.5rem;
+      --space-7: 6rem;
+      --space-8: 9rem;
+
+      --radius-sm: 4px;
+      --radius:    8px;
+      --radius-lg: 16px;
+
+      --max-w: 1140px;
+      --nav-h: 64px;
+
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow:    0 4px 16px rgba(0,0,0,.07), 0 2px 6px rgba(0,0,0,.04);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.1),  0 4px 12px rgba(0,0,0,.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: var(--size-base);
+      line-height: 1.7;
+      color: var(--color-ink);
+      background: var(--color-canvas);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a   { color: inherit; text-decoration: none; }
+    ul  { list-style: none; }
+
+    /* =============================================
+       UTILITY
+    ============================================= */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--space-4);
+    }
+
+    .label {
+      font-family: var(--font-body);
+      font-size: var(--size-xs);
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+    }
+
+    .label--accent { color: var(--color-accent); }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(var(--size-2xl), 4vw, var(--size-3xl));
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-ink);
+    }
+
+    .section-intro {
+      font-size: var(--size-md);
+      color: var(--color-ink-soft);
+      max-width: 600px;
+      line-height: 1.75;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--color-accent);
+      margin: var(--space-3) 0;
+    }
+
+    .section-pad {
+      padding: var(--space-8) 0;
+    }
+
+    .section-pad--sm {
+      padding: var(--space-6) 0;
+    }
+
+    /* =============================================
+       NAVBAR
+    ============================================= */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--nav-h);
+      background: rgba(250,250,248,.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      z-index: 100;
+      transition: border-color .3s, box-shadow .3s;
+    }
+
+    #navbar.scrolled {
+      border-color: var(--color-border);
+      box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--nav-h);
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: var(--size-xl);
+      color: var(--color-ink);
+      letter-spacing: -.02em;
+    }
+
+    .nav-logo span {
+      color: var(--color-accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .nav-links a {
+      font-size: var(--size-sm);
+      font-weight: 400;
+      color: var(--color-ink-soft);
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--color-ink); }
+
+    .nav-cta {
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--color-accent) !important;
+      border: 1px solid var(--color-accent);
+      padding: 7px 18px;
+      border-radius: var(--radius-sm);
+      transition: background .2s, color .2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--color-accent);
+      color: #fff !important;
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--color-ink);
+      transition: .3s;
+    }
+
+    /* Mobile nav */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      width: 100%;
+      background: var(--color-canvas);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-3) var(--space-4);
+      flex-direction: column;
+      gap: var(--space-2);
+      z-index: 99;
+    }
+
+    .nav-mobile.open { display: flex; }
+
+    .nav-mobile a {
+      font-size: var(--size-base);
+      color: var(--color-ink-soft);
+      padding: var(--space-1) 0;
+      border-bottom: 1px solid var(--color-surface);
+    }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    #hero {
+      padding-top: calc(var(--nav-h) + var(--space-7));
+      padding-bottom: var(--space-7);
+      background: var(--color-canvas);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Subtle grid background */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--color-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: .35;
+      pointer-events: none;
+    }
+
+    /* Fade out grid at bottom */
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 160px;
+      background: linear-gradient(transparent, var(--color-canvas));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+    }
+
+    .hero-badge {
+      font-size: var(--size-xs);
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-lt);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(var(--size-3xl), 6vw, var(--size-5xl));
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      color: var(--color-ink);
+      max-width: 820px;
+      margin-bottom: var(--space-3);
+    }
+
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+
+    .hero-sub {
+      font-size: var(--size-lg);
+      color: var(--color-ink-soft);
+      max-width: 560px;
+      line-height: 1.65;
+      margin-bottom: var(--space-5);
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: #fff;
+      background: var(--color-accent);
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-dk);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 400;
+      color: var(--color-ink-soft);
+      background: transparent;
+      padding: 13px 24px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-ink-soft);
+      color: var(--color-ink);
+    }
+
+    /* Proof strip */
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-5);
+      padding-top: var(--space-5);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .proof-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .proof-value {
+      font-family: var(--font-display);
+      font-size: var(--size-2xl);
+      color: var(--color-ink);
+      line-height: 1;
+    }
+
+    .proof-label {
+      font-size: var(--size-xs);
+      color: var(--color-ink-muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .proof-divider {
+      width: 1px;
+      background: var(--color-border);
+      align-self: stretch;
+    }
+
+    /* =============================================
+       PROBLEM SECTION
+    ============================================= */
+    #problem {
+      background: var(--color-ink);
+      color: var(--color-canvas);
+      padding: var(--space-8) 0;
+    }
+
+    #problem .label { color: rgba(255,255,255,.4); }
+    #problem .section-title { color: var(--color-canvas); }
+    #problem .section-intro { color: rgba(255,255,255,.65); max-width: 680px; }
+    #problem .divider { background: var(--color-warm); }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      margin-top: var(--space-6);
+    }
+
+    .problem-card {
+      padding: var(--space-4);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+    }
+
+    .problem-card__icon {
+      font-size: 1.4rem;
+      margin-bottom: var(--space-2);
+      opacity: .7;
+    }
+
+    .problem-card__title {
+      font-size: var(--size-base);
+      font-weight: 500;
+      color: rgba(255,255,255,.9);
+      margin-bottom: var(--space-1);
+    }
+
+    .problem-card__body {
+      font-size: var(--size-sm);
+      color: rgba(255,255,255,.5);
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       HOW IT WORKS
+    ============================================= */
+    #how-it-works { background: var(--color-canvas); }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-7);
+      align-items: center;
+    }
+
+    .how-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      display: flex;
+      gap: var(--space-3);
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--size-xs);
+      font-weight: 500;
+      color: var(--color-ink-muted);
+      margin-top: 4px;
+    }
+
+    .step-content {}
+
+    .step-title {
+      font-size: var(--size-base);
+      font-weight: 500;
+      color: var(--color-ink);
+      margin-bottom: 6px;
+    }
+
+    .step-body {
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.65;
+    }
+
+    .step-tag {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-lt);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    /* Image placeholder block */
+    .img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      color: var(--color-ink-muted);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .img-placeholder img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+    }
+
+    .img-placeholder__label {
+      font-size: var(--size-xs);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      text-align: center;
+      padding: var(--space-4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .img-placeholder__icon {
+      font-size: 2rem;
+      opacity: .3;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* =============================================
+       OVERVIEW
+    ============================================= */
+    #overview {
+      background: var(--color-surface);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-7);
+      align-items: center;
+    }
+
+    .overview-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3);
+      background: var(--color-canvas);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+    }
+
+    .pillar__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .pillar__text {}
+    .pillar__title {
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--color-ink);
+      margin-bottom: 3px;
+    }
+
+    .pillar__body {
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       SOLUTIONS OVERVIEW
+    ============================================= */
+    #solutions {
+      background: var(--color-canvas);
+    }
+
+    .solutions-header {
+      max-width: 680px;
+      margin-bottom: var(--space-6);
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
+    }
+
+    .sol-card {
+      padding: var(--space-4) var(--space-4) var(--space-5);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-canvas);
+      transition: box-shadow .25s, border-color .25s;
+      cursor: default;
+    }
+
+    .sol-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+
+    .sol-card__tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background: var(--color-accent-lt);
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: var(--space-3);
+    }
+
+    .sol-card__title {
+      font-family: var(--font-display);
+      font-size: var(--size-xl);
+      font-weight: 400;
+      color: var(--color-ink);
+      margin-bottom: var(--space-2);
+      line-height: 1.2;
+    }
+
+    .sol-card__body {
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.65;
+      margin-bottom: var(--space-3);
+    }
+
+    .sol-card__list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sol-card__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+    }
+
+    .sol-card__list li::before {
+      content: '→';
+      color: var(--color-accent);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Secondary image block */
+    .team-visual {
+      margin-top: var(--space-7);
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: var(--space-5);
+      align-items: center;
+    }
+
+    .team-visual__text {}
+    .team-visual__title {
+      font-family: var(--font-display);
+      font-size: var(--size-2xl);
+      font-weight: 400;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-bottom: var(--space-2);
+    }
+
+    .team-visual__body {
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       INDIVIDUAL SOLUTION DEEP-DIVES
+    ============================================= */
+    .solution-section {
+      padding: var(--space-8) 0;
+    }
+
+    .solution-section--alt {
+      background: var(--color-surface);
+    }
+
+    .solution-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-7);
+      align-items: start;
+    }
+
+    .solution-meta {}
+    .solution-product-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--size-xs);
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      margin-bottom: var(--space-3);
+    }
+
+    .solution-product-tag span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+
+    .solution-title {
+      font-family: var(--font-display);
+      font-size: clamp(var(--size-xl), 3vw, var(--size-2xl));
+      font-weight: 400;
+      color: var(--color-ink);
+      line-height: 1.2;
+      margin-bottom: var(--space-3);
+    }
+
+    .solution-body {
+      font-size: var(--size-md);
+      color: var(--color-ink-soft);
+      line-height: 1.75;
+      margin-bottom: var(--space-4);
+      font-weight: 300;
+    }
+
+    .solution-features {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      padding: var(--space-2) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .feature-row:last-child { border-bottom: none; }
+
+    .feature-row__check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--color-accent-lt);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3px;
+    }
+
+    .feature-row__check svg {
+      width: 10px;
+      height: 10px;
+      stroke: var(--color-accent);
+    }
+
+    .feature-row__text {
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.6;
+    }
+
+    .solution-detail-panel {
+      background: var(--color-ink);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      color: #fff;
+    }
+
+    .solution-section--alt .solution-detail-panel {
+      background: var(--color-canvas);
+      border: 1px solid var(--color-border);
+      color: var(--color-ink);
+    }
+
+    .panel-label {
+      font-size: var(--size-xs);
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: var(--space-3);
+    }
+
+    .solution-section--alt .panel-label { color: var(--color-ink-muted); }
+
+    .panel-title {
+      font-family: var(--font-display);
+      font-size: var(--size-xl);
+      font-weight: 400;
+      color: rgba(255,255,255,.95);
+      margin-bottom: var(--space-3);
+      line-height: 1.25;
+    }
+
+    .solution-section--alt .panel-title { color: var(--color-ink); }
+
+    .panel-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .panel-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      font-size: var(--size-sm);
+      color: rgba(255,255,255,.6);
+      line-height: 1.55;
+      padding-bottom: var(--space-2);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .panel-list li:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .panel-list li::before {
+      content: '—';
+      color: rgba(255,255,255,.25);
+      flex-shrink: 0;
+    }
+
+    .solution-section--alt .panel-list li { color: var(--color-ink-soft); }
+    .solution-section--alt .panel-list li::before { color: var(--color-border); }
+    .solution-section--alt .panel-list li { border-bottom-color: var(--color-border); }
+
+    /* =============================================
+       STACK
+    ============================================= */
+    #stack {
+      background: var(--color-canvas);
+    }
+
+    .stack-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-7);
+      align-items: start;
+      margin-bottom: var(--space-6);
+    }
+
+    .stack-tiles {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-2);
+    }
+
+    .stack-tile {
+      padding: var(--space-3) var(--space-2);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      text-align: center;
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--color-ink-soft);
+      transition: background .2s, border-color .2s;
+    }
+
+    .stack-tile:hover {
+      background: var(--color-canvas);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .stack-tile--feature {
+      border-color: var(--color-accent);
+      background: var(--color-accent-lt);
+      color: var(--color-accent);
+    }
+
+    .stack-stat {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      background: var(--color-ink);
+      border-radius: var(--radius-lg);
+      color: #fff;
+      margin-top: var(--space-3);
+    }
+
+    .stack-stat__val {
+      font-family: var(--font-display);
+      font-size: var(--size-4xl);
+      line-height: 1;
+      color: #fff;
+    }
+
+    .stack-stat__desc {
+      font-size: var(--size-sm);
+      color: rgba(255,255,255,.55);
+      line-height: 1.5;
+    }
+
+    /* =============================================
+       PRICING
+    ============================================= */
+    #pricing {
+      background: var(--color-surface);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+      margin-top: var(--space-5);
+    }
+
+    .price-card {
+      padding: var(--space-5);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      background: var(--color-canvas);
+    }
+
+    .price-card--primary {
+      background: var(--color-ink);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .price-card__tag {
+      font-size: var(--size-xs);
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      margin-bottom: var(--space-3);
+    }
+
+    .price-card--primary .price-card__tag { color: rgba(255,255,255,.4); }
+
+    .price-card__amount {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: var(--space-2);
+    }
+
+    .price-card__currency {
+      font-size: var(--size-xl);
+      font-weight: 300;
+      color: var(--color-ink-muted);
+    }
+
+    .price-card--primary .price-card__currency { color: rgba(255,255,255,.5); }
+
+    .price-card__value {
+      font-family: var(--font-display);
+      font-size: var(--size-4xl);
+      font-weight: 400;
+      line-height: 1;
+      color: var(--color-ink);
+    }
+
+    .price-card--primary .price-card__value { color: #fff; }
+
+    .price-card__period {
+      font-size: var(--size-sm);
+      color: var(--color-ink-muted);
+      align-self: flex-end;
+      padding-bottom: 4px;
+    }
+
+    .price-card--primary .price-card__period { color: rgba(255,255,255,.4); }
+
+    .price-card__title {
+      font-size: var(--size-md);
+      font-weight: 500;
+      color: var(--color-ink);
+      margin-bottom: var(--space-1);
+    }
+
+    .price-card--primary .price-card__title { color: #fff; }
+
+    .price-card__desc {
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.65;
+      margin-bottom: var(--space-4);
+    }
+
+    .price-card--primary .price-card__desc { color: rgba(255,255,255,.55); }
+
+    .price-card__list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .price-card__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+    }
+
+    .price-card--primary .price-card__list li { color: rgba(255,255,255,.6); }
+
+    .price-check {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--color-accent-lt);
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price-check svg { width: 9px; stroke: var(--color-accent); }
+
+    .price-card--primary .price-check { background: rgba(255,255,255,.15); }
+    .price-card--primary .price-check svg { stroke: rgba(255,255,255,.7); }
+
+    .pricing-note {
+      margin-top: var(--space-4);
+      padding: var(--space-4);
+      background: var(--color-accent-lt);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       USE CASES
+    ============================================= */
+    #use-cases { background: var(--color-canvas); }
+
+    .usecases-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-3);
+      margin-top: var(--space-5);
+    }
+
+    .uc-card {
+      padding: var(--space-3) var(--space-3) var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      background: var(--color-canvas);
+    }
+
+    .uc-card__icon {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+
+    .uc-card__title {
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--color-ink);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .uc-card__body {
+      font-size: 13px;
+      color: var(--color-ink-muted);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       FAQ
+    ============================================= */
+    #faq {
+      background: var(--color-surface);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3) var(--space-6);
+      margin-top: var(--space-5);
+    }
+
+    .faq-item {
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-q {
+      font-size: var(--size-base);
+      font-weight: 500;
+      color: var(--color-ink);
+      margin-bottom: var(--space-1);
+      line-height: 1.4;
+    }
+
+    .faq-a {
+      font-size: var(--size-sm);
+      color: var(--color-ink-soft);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       CONTACT / CTA
+    ============================================= */
+    #contact {
+      background: var(--color-ink);
+      color: #fff;
+      padding: var(--space-8) 0;
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: var(--space-7);
+      align-items: center;
+    }
+
+    .contact-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(var(--size-2xl), 4vw, var(--size-3xl));
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: var(--space-3);
+    }
+
+    .contact-tagline em {
+      font-style: italic;
+      color: var(--color-warm);
+    }
+
+    .contact-desc {
+      font-size: var(--size-md);
+      color: rgba(255,255,255,.55);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: var(--space-4);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--color-ink);
+      background: #fff;
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      transition: opacity .2s;
+    }
+
+    .btn-white:hover { opacity: .9; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 400;
+      color: rgba(255,255,255,.65);
+      background: transparent;
+      padding: 13px 24px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,.2);
+      transition: border-color .2s, color .2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,.5);
+      color: #fff;
+    }
+
+    .contact-form-area {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+    }
+
+    .form-title {
+      font-size: var(--size-base);
+      font-weight: 500;
+      color: rgba(255,255,255,.9);
+      margin-bottom: var(--space-3);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-2);
+    }
+
+    .form-group label {
+      display: block;
+      font-size: var(--size-xs);
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      color: rgba(255,255,255,.85);
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-sm);
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .form-group input::placeholder { color: rgba(255,255,255,.3); }
+    .form-group input:focus,
+    .form-group select:focus { border-color: rgba(255,255,255,.35); }
+
+    .form-group select option { background: #1a1a1a; color: #fff; }
+
+    .form-submit {
+      width: 100%;
+      margin-top: var(--space-3);
+      padding: 12px;
+      font-family: var(--font-body);
+      font-size: var(--size-sm);
+      font-weight: 500;
+      color: var(--color-ink);
+      background: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+
+    .form-submit:hover { opacity: .9; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--color-ink);
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding: var(--space-4) 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: var(--size-lg);
+      color: rgba(255,255,255,.5);
+    }
+
+    .footer-logo span { color: rgba(255,255,255,.25); }
+
+    .footer-copy {
+      font-size: var(--size-xs);
+      color: rgba(255,255,255,.3);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--space-4);
+    }
+
+    .footer-links a {
+      font-size: var(--size-xs);
+      color: rgba(255,255,255,.35);
+      transition: color .2s;
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+
+    /* =============================================
+       CHECKMARK SVG HELPER
+    ============================================= */
+    .check-svg {
+      display: none;
+    }
+
+    /* =============================================
+       SCROLL REVEAL ANIMATIONS
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 900px) {
+      .problem-grid,
+      .how-grid,
+      .overview-grid,
+      .solutions-grid,
+      .solution-inner,
+      .stack-intro-grid,
+      .pricing-grid,
+      .contact-inner,
+      .faq-grid,
+      .team-visual {
+        grid-template-columns: 1fr;
+      }
+
+      .stack-tiles { grid-template-columns: repeat(3, 1fr); }
+      .usecases-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .hero-h1 { font-size: clamp(var(--size-2xl), 8vw, var(--size-4xl)); }
+
+      .hero-proof { gap: var(--space-4); }
+      .proof-divider { display: none; }
+
+      .contact-inner { gap: var(--space-5); }
+    }
+
+    @media (max-width: 600px) {
+      :root { --space-8: 5rem; --space-7: 3.5rem; }
+
+      .stack-tiles { grid-template-columns: repeat(2, 1fr); }
+      .usecases-grid { grid-template-columns: 1fr; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       NAVBAR
+  ============================================= -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Eirene<span>X</span></a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="nav-cta">Get Started</a></li>
+        </ul>
+
+        <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#overview">Overview</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#stack">Stack</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Get Started</a>
+  </nav>
+
+
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">
+          <span class="hero-badge">Enterprise AI</span>
+        </div>
+
+        <h1 class="hero-h1">
+          AI adoption for enterprises<br />that need it to be <em>practical.</em>
+        </h1>
+
+        <p class="hero-sub">
+          We help organizations set up secure, lightweight AI infrastructure and deploy real workflow solutions across engineering, marketing, and operations
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Start the conversation</a>
+          <a href="#how-it-works" class="btn-secondary">See how it works</a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="proof-item">
+            <span class="proof-value">119+</span>
+            <span class="proof-label">Supported models</span>
+          </div>
+          <div class="proof-divider" aria-hidden="true"></div>
+        
+          <div class="proof-divider" aria-hidden="true"></div>
+          <div class="proof-item">
+            <span class="proof-value">3+</span>
+            <span class="proof-label">Pre-built Workflow solutions</span>
+          </div>
+          <div class="proof-divider" aria-hidden="true"></div>
+          <div class="proof-item">
+            <span class="proof-value">No GPU</span>
+            <span class="proof-label">Required for basic setups</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       PROBLEM
+  ============================================= -->
+  <section id="problem">
+    <div class="container">
+      <div class="reveal">
+        <p class="label">The situation</p>
+        <div class="divider"></div>
+        <h2 class="section-title">
+          Enterprise AI adoption<br />tends to stall at the same places.
+        </h2>
+        <p class="section-intro" style="margin-top: var(--space-3);">
+          The ambition is real. The blockers are consistent. Most organizations aren't held back by a lack of interest in AI — they're held back by the path to getting there safely and practically.
+        </p>
+      </div>
+
+      <div class="problem-grid" style="margin-top: var(--space-5);">
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-card__icon">⚙️</div>
+          <div class="problem-card__title">Infrastructure feels too heavy</div>
+          <div class="problem-card__body">Teams assume they need expensive GPUs, dedicated servers, and weeks of setup before they can begin. Many don't start at all.</div>
+        </div>
+
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-card__icon">🔒</div>
+          <div class="problem-card__title">Data control is a genuine concern</div>
+          <div class="problem-card__body">Sending proprietary, sensitive, or regulated data to external cloud APIs is not acceptable for many organizations. On-prem isn't a luxury — it's a requirement.</div>
+        </div>
+
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="problem-card__icon">🤷</div>
+          <div class="problem-card__title">Too many model choices, no guidance</div>
+          <div class="problem-card__body">With hundreds of models available, teams default to one they've heard of, often paying more than they need to or using the wrong model for the task.</div>
+        </div>
+
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-card__icon">💸</div>
+          <div class="problem-card__title">Token costs add up unexpectedly</div>
+          <div class="problem-card__body">Without a routing layer, organizations burn tokens on every prompt regardless of complexity. There's no cost-awareness baked into how teams interact with models.</div>
+        </div>
+
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-card__icon">🔀</div>
+          <div class="problem-card__title">Tooling is fragmented and disconnected</div>
+          <div class="problem-card__body">AI tools are adopted team by team, without a shared foundation. Engineering uses one tool, marketing tries another, and none of it connects to a secure internal layer.</div>
+        </div>
+
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="problem-card__icon">📋</div>
+          <div class="problem-card__title">Teams don't know where to begin</div>
+          <div class="problem-card__body">There's a gap between wanting to use AI and knowing what to set up, in what order, for which team, and with what degree of control. The starting point isn't obvious.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       HOW IT WORKS
+  ============================================= -->
+  <section id="how-it-works" class="section-pad">
+    <div class="container">
+      <div class="how-grid">
+
+        <div class="how-steps">
+          <div class="reveal">
+            <p class="label">How it works</p>
+            <div class="divider"></div>
+            <h2 class="section-title">
+              A clear path from zero<br />to operational AI.
+            </h2>
+            <p class="section-intro" style="margin-top: var(--space-3); margin-bottom: var(--space-5);">
+              EireneX starts with the foundation and builds outward. Each step is deliberate. Nothing requires you to over-invest before you see results.
+            </p>
+          </div>
+
+          <div class="step reveal reveal-delay-1">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <div class="step-title">Set up the base AI environment</div>
+              <div class="step-body">
+                We configure a lightweight AI environment suited to your organization. Basic setups don't require GPUs — in some cases, a standard workstation or even a MacBook is enough to get started. On-prem deployment is fully supported from day one.
+              </div>
+              <span class="step-tag">On-prem supported · No mandatory GPU</span>
+            </div>
+          </div>
+
+          <div class="step reveal reveal-delay-2">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <div class="step-title">Connect the right models and harnesses</div>
+              <div class="step-body">
+                EireneX supports 119+ models. We connect the right ones for your context — whether that's local models, APIs, or both. We set up the harnesses your team needs: CloudCode, Codex, OpenCode, and more.
+              </div>
+              <span class="step-tag">CloudCode · Codex · OpenCode · +more</span>
+            </div>
+          </div>
+
+          <div class="step reveal reveal-delay-3">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <div class="step-title">Deploy practical workflows for teams</div>
+              <div class="step-body">
+                Once the foundation is in place, we deploy the workflow solutions that match your immediate needs — Model Selector for secure internal chat, Development Workbench for engineering teams, or MarketingFlow for marketing operations.
+              </div>
+              <span class="step-tag">Model Selector · Dev Workbench · MarketingFlow</span>
+            </div>
+          </div>
+
+          <div class="step reveal reveal-delay-4">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <div class="step-title">Start using AI inside daily work</div>
+              <div class="step-body">
+                This is where the infrastructure becomes real. Teams interact with secure AI, get model recommendations, work faster on SDLC tasks, and run marketing workflows — all from a controlled, cost-aware foundation.
+              </div>
+              <span class="step-tag">Operational from day one</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IMAGE 1: Developer/team environment with AI companions -->
+        <div class="img-placeholder reveal reveal-delay-2">
+          <!--
+            =============================================
+            IMAGE 1 PLACEMENT
+            Replace the content below with your image tag.
+            Suggested framing: "AI in the workflow"
+            Description: Developer/team environment with
+            playful AI companions around real workstations.
+            =============================================
+            USAGE:
+            <img src="your-image-1.jpg" alt="AI working alongside teams in a developer environment" />
+            =============================================
+          -->
+          <div class="img-placeholder__icon" aria-hidden="true">🖼️</div>
+          <p class="img-placeholder__label">
+            Image 1: AI in the workflow<br />
+            <small style="opacity:.6">Replace with: developer/team environment with AI companions at workstations</small>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       OVERVIEW
+  ============================================= -->
+  <section id="overview" class="section-pad">
+    <div class="container">
+      <div class="overview-grid">
+
+        <div class="reveal">
+          <p class="label">What EireneX is</p>
+          <div class="divider"></div>
+          <h2 class="section-title">
+            An enablement layer, not a single tool.
+          </h2>
+          <p class="section-intro" style="margin-top: var(--space-3);">
+            EireneX is an enterprise AI enablement cohort. It combines infrastructure readiness with three workflow-ready solutions — each designed to make AI useful inside your organization's actual operations.
+          </p>
+          <p class="section-intro" style="margin-top: var(--space-3);">
+            The goal isn't to give you more AI tools. It's to give you a controlled, practical, secure foundation that your teams can actually use.
+          </p>
+        </div>
+
+        <div class="overview-pillars reveal reveal-delay-2">
+          <div class="pillar">
+            <div class="pillar__dot"></div>
+            <div class="pillar__text">
+              <div class="pillar__title">Infrastructure first</div>
+              <div class="pillar__body">We start with the environment — model hosting, harness configuration, and on-prem setup — before any workflow is deployed.</div>
+            </div>
+          </div>
+
+          <div class="pillar">
+            <div class="pillar__dot"></div>
+            <div class="pillar__text">
+              <div class="pillar__title">Secure by design</div>
+              <div class="pillar__body">On-prem hosting keeps data inside your environment. The Model Selector layer handles routing without sending sensitive prompts to unnecessary external APIs.</div>
+            </div>
+          </div>
+
+          <div class="pillar">
+            <div class="pillar__dot"></div>
+            <div class="pillar__text">
+              <div class="pillar__title">Cost-aware from the start</div>
+              <div class="pillar__body">Token usage and model selection are treated as first-class concerns. You don't run expensive models on tasks that don't require them.</div>
+            </div>
+          </div>
+
+          <div class="pillar">
+            <div class="pillar__dot"></div>
+            <div class="pillar__text">
+              <div class="pillar__title">Solutions for real teams</div>
+              <div class="pillar__body">Engineering, marketing, and operations each get a workflow solution tailored to their daily work — not generic AI access with no structure.</div>
+            </div>
+          </div>
+
+          <div class="pillar">
+            <div class="pillar__dot"></div>
+            <div class="pillar__text">
+              <div class="pillar__title">Incremental by nature</div>
+              <div class="pillar__body">You don't need to adopt everything at once. Start with a base setup and one solution. Expand as teams see value and appetite grows.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SOLUTIONS OVERVIEW
+  ============================================= -->
+  <section id="solutions" class="section-pad">
+    <div class="container">
+
+      <div class="solutions-header reveal">
+        <p class="label">The cohort</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Three solutions, one foundation.</h2>
+        <p class="section-intro" style="margin-top: var(--space-3);">
+          Each solution in the EireneX cohort is built to address a specific operational need. They share the same secure infrastructure layer and can be adopted individually or together.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+
+        <div class="sol-card reveal reveal-delay-1">
+          <span class="sol-card__tag">Model Selector</span>
+          <div class="sol-card__title">Secure AI and model routing</div>
+          <p class="sol-card__body">
+            A token-aware, cost-aware model selection and chat layer for organizations that need secure internal AI without sending sensitive data to external APIs.
+          </p>
+          <ul class="sol-card__list">
+            <li>Secure on-prem chat environment</li>
+            <li>Prompt-to-model recommendation</li>
+            <li>Token and cost management</li>
+            <li>Internal data stays internal</li>
+          </ul>
+        </div>
+
+        <div class="sol-card reveal reveal-delay-2">
+          <span class="sol-card__tag">Development Workbench</span>
+          <div class="sol-card__title">Engineering and SDLC support</div>
+          <p class="sol-card__body">
+            An AI-enabled workbench for software teams — helping engineers move faster by automating repetitive SDLC tasks, supporting delivery, and reducing friction in the development cycle.
+          </p>
+          <ul class="sol-card__list">
+            <li>SDLC workflow automation</li>
+            <li>Engineering task acceleration</li>
+            <li>Repetitive work reduction</li>
+            <li>Supports structured delivery</li>
+          </ul>
+        </div>
+
+        <div class="sol-card reveal reveal-delay-3">
+          <span class="sol-card__tag">MarketingFlow</span>
+          <div class="sol-card__title">Marketing operations support</div>
+          <p class="sol-card__body">
+            Structured AI workflow support for marketing functions. Helps teams automate repeatable tasks, coordinate execution, and produce output more consistently — without replacing the people.
+          </p>
+          <ul class="sol-card__list">
+            <li>Repeatable workflow automation</li>
+            <li>Cross-department coordination</li>
+            <li>Consistent output structure</li>
+            <li>Operational, not aspirational</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Second image: team/role clusters -->
+      <div class="team-visual reveal" style="margin-top: var(--space-7);">
+        <div class="team-visual__text">
+          <p class="label">One setup. Multiple teams.</p>
+          <div class="divider"></div>
+          <h3 class="team-visual__title">
+            Role-based AI enablement<br />from a single foundation.
+          </h3>
+          <p class="team-visual__body">
+            EireneX isn't deployed once for one team. A single infrastructure setup can serve engineering, marketing, operations, and leadership — each with their own workflow layer. The foundation is shared; the application is specific.
+          </p>
+        </div>
+
+        <!-- IMAGE 2: Clusters / roles / teams -->
+        <div class="img-placeholder">
+          <!--
+            =============================================
+            IMAGE 2 PLACEMENT
+            Replace the content below with your image tag.
+            Suggested framing: "One AI setup, multiple team workflows"
+            Description: Structured image showing clusters /
+            roles / teams. Role-based enablement across the org.
+            =============================================
+            USAGE:
+            <img src="your-image-2.jpg" alt="Role-based AI enablement across teams and departments" />
+            =============================================
+          -->
+          <div class="img-placeholder__icon" aria-hidden="true">🖼️</div>
+          <p class="img-placeholder__label">
+            Image 2: One AI setup, multiple team workflows<br />
+            <small style="opacity:.6">Replace with: structured clusters/roles/teams visual showing role-based enablement</small>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       MODEL SELECTOR DEEP-DIVE
+  ============================================= -->
+  <section id="model-selector" class="solution-section">
+    <div class="container">
+      <div class="solution-inner">
+
+        <div class="solution-meta reveal">
+          <div class="solution-product-tag"><span></span> Model Selector</div>
+          <h2 class="solution-title">
+            Secure internal AI with model routing built in.
+          </h2>
+          <p class="solution-body">
+            Most enterprises want secure AI access but don't want the complexity of managing it themselves. Model Selector gives you a controlled chat layer with prompt-aware routing — so the right model handles each task, and sensitive data never leaves the environment.
+          </p>
+
+          <div class="solution-features">
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Secure on-prem chat — your data stays inside your environment, always.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Model recommendation engine — routes each prompt to the most cost-effective capable model.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Token usage management — avoids unnecessary consumption on every interaction.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Includes an on-prem model for tasks that should never touch an external API.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Used by internal teams for secure daily AI interactions — not just IT or security teams.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="solution-detail-panel reveal reveal-delay-2">
+          <div class="panel-label">How it operates</div>
+          <div class="panel-title">Intelligent routing, quiet by design.</div>
+          <ul class="panel-list">
+            <li>A team member submits a prompt through the secure chat interface</li>
+            <li>Model Selector evaluates the prompt's complexity and intent</li>
+            <li>It routes to the most appropriate model — local, API, or hybrid</li>
+            <li>Token cost and capability are both weighted in the routing decision</li>
+            <li>Sensitive prompts are kept on-prem; external APIs are used only when appropriate</li>
+            <li>Usage is tracked and visible — organizations see where costs are being incurred</li>
+            <li>Teams interact through a clean chat interface; the routing logic is invisible to the user</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       DEVELOPMENT WORKBENCH DEEP-DIVE
+  ============================================= -->
+  <section id="dev-workbench" class="solution-section solution-section--alt">
+    <div class="container">
+      <div class="solution-inner">
+
+        <div class="solution-detail-panel reveal">
+          <div class="panel-label">Engineering AI support</div>
+          <div class="panel-title">From sprint to deployment, with less repetitive work.</div>
+          <ul class="panel-list">
+            <li>Supports ticket scoping, code review prep, and documentation generation</li>
+            <li>Reduces boilerplate work that slows engineering teams down</li>
+            <li>Integrates into existing SDLC tooling without requiring a rewrite</li>
+            <li>Engineers stay in their workflow — the AI assists, not replaces</li>
+            <li>Supports structured delivery: cleaner handoffs, better context</li>
+            <li>Compatible with the CloudCode, Codex, and OpenCode harnesses already in your stack</li>
+            <li>Useful for both individual contributors and engineering leads managing team output</li>
+          </ul>
+        </div>
+
+        <div class="solution-meta reveal reveal-delay-2">
+          <div class="solution-product-tag"><span></span> Development Workbench</div>
+          <h2 class="solution-title">
+            Engineering AI for teams that build real software.
+          </h2>
+          <p class="solution-body">
+            Development Workbench is not an AI code generator you paste into a Slack channel. It's a structured, AI-enabled workbench that fits into how software teams actually operate — from requirements to delivery.
+          </p>
+
+          <div class="solution-features">
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">SDLC workflow support — from requirements scoping through to delivery hand-off.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Automation of repetitive engineering tasks — without disrupting established workflows.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Works alongside the harnesses your engineers already use: CloudCode, Codex, OpenCode.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Practical for delivery leads who need more consistent handoffs and documentation.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Runs on the same secure EireneX infrastructure — no separate setup required.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       MARKETINGFLOW DEEP-DIVE
+  ============================================= -->
+  <section id="marketingflow" class="solution-section">
+    <div class="container">
+      <div class="solution-inner">
+
+        <div class="solution-meta reveal">
+          <div class="solution-product-tag"><span></span> MarketingFlow</div>
+          <h2 class="solution-title">
+            Marketing operations that run<br />with structure, not guesswork.
+          </h2>
+          <p class="solution-body">
+            MarketingFlow is operational support for marketing teams. It helps automate the repeatable parts of marketing execution — so teams spend more time on the work that actually requires judgment.
+          </p>
+
+          <div class="solution-features">
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Workflow automation for repeatable marketing tasks — briefs, copy drafts, review cycles, campaign setup.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Supports different marketing functions — content, demand, brand, product marketing — not just one team.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Structured execution — tasks move through defined stages, not into a black box.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Marketing leaders get consistent output quality and team coordination without micromanagement.</div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row__check">
+                <svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg>
+              </div>
+              <div class="feature-row__text">Runs on the shared EireneX infrastructure — no separate procurement required.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="solution-detail-panel reveal reveal-delay-2">
+          <div class="panel-label">What it handles</div>
+          <div class="panel-title">The repeatable work that slows marketing teams down.</div>
+          <ul class="panel-list">
+            <li>Brief generation from structured inputs — strategy, audience, channel, objective</li>
+            <li>First-draft copy for defined formats: emails, landing pages, social, ads</li>
+            <li>Campaign checklist and workflow coordination across functions</li>
+            <li>Content review preparation — structured summaries, suggested edits, gap analysis</li>
+            <li>Consistent output templates that maintain brand and messaging discipline</li>
+            <li>Batch task handling — process multiple assets in a structured queue</li>
+            <li>Used by growth teams, content teams, brand teams, and marketing ops simultaneously</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       STACK
+  ============================================= -->
+  <section id="stack" class="section-pad">
+    <div class="container">
+      <div class="stack-intro-grid">
+
+        <div class="reveal">
+          <p class="label">Supported stack</p>
+          <div class="divider"></div>
+          <h2 class="section-title">
+            Built on real, practical tooling.
+          </h2>
+          <p class="section-intro" style="margin-top: var(--space-3);">
+            EireneX doesn't lock you into a proprietary model stack. We support open and widely-used tooling, work with a broad range of models, and connect the harnesses that engineering teams already use.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="stack-stat">
+            <div class="stack-stat__val">119+</div>
+            <div class="stack-stat__desc">
+              Models supported across open-source, commercial, and on-prem deployments. Local models for secure workloads. API models where appropriate.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="stack-tiles reveal">
+        <div class="stack-tile stack-tile--feature">CloudCode</div>
+        <div class="stack-tile stack-tile--feature">Codex</div>
+        <div class="stack-tile stack-tile--feature">OpenCode</div>
+        <div class="stack-tile">Ollama</div>
+        <div class="stack-tile">LM Studio</div>
+        <div class="stack-tile">Open WebUI</div>
+        <div class="stack-tile">Llama 3.x</div>
+        <div class="stack-tile">Mistral</div>
+        <div class="stack-tile">Gemma</div>
+        <div class="stack-tile">Phi</div>
+        <div class="stack-tile">Qwen</div>
+        <div class="stack-tile">DeepSeek</div>
+        <div class="stack-tile">GPT-4o</div>
+        <div class="stack-tile">Claude</div>
+        <div class="stack-tile">Gemini</div>
+        <div class="stack-tile">+ 100 more</div>
+      </div>
+
+      <p style="margin-top: var(--space-4); font-size: var(--size-sm); color: var(--color-ink-muted);">
+        Highlighted tiles are first-class supported harnesses. All others are compatible via standard integrations. Full model compatibility list available on request.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       PRICING
+  ============================================= -->
+  <section id="pricing" class="section-pad">
+    <div class="container">
+
+      <div class="reveal" style="max-width: 580px;">
+        <p class="label">Pricing</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Simple pricing. No hidden tiers.</h2>
+        <p class="section-intro" style="margin-top: var(--space-3);">
+          We priced EireneX to remove the friction from getting started. A one-time setup cost covers the environment build. A low monthly fee keeps everything running.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="price-card price-card--primary reveal reveal-delay-1">
+          <div class="price-card__tag">Setup</div>
+          <div class="price-card__amount">
+            <span class="price-card__currency">$</span>
+            <span class="price-card__value">1,000</span>
+            <span class="price-card__period">one-time</span>
+          </div>
+          <div class="price-card__title">Base environment setup</div>
+          <p class="price-card__desc">
+            Everything needed to get the EireneX foundation operational. Infrastructure configuration, model setup, harness connection, and deployment of your chosen workflow solution.
+          </p>
+          <ul class="price-card__list">
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              On-prem environment configuration
+            </li>
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              Model integration and harness setup
+            </li>
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              One workflow solution deployment
+            </li>
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              Handoff documentation and team walkthrough
+            </li>
+          </ul>
+        </div>
+
+        <div class="price-card reveal reveal-delay-2">
+          <div class="price-card__tag">Recurring</div>
+          <div class="price-card__amount">
+            <span class="price-card__currency" style="color:var(--color-ink-muted);">$</span>
+            <span class="price-card__value">19</span>
+            <span class="price-card__period" style="color:var(--color-ink-muted);">/ month</span>
+          </div>
+          <div class="price-card__title">Ongoing access and support</div>
+          <p class="price-card__desc">
+            Keeps the platform current and supported. Covers updates, compatibility maintenance, and access to new model integrations as the ecosystem evolves.
+          </p>
+          <ul class="price-card__list">
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              Platform and integration updates
+            </li>
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              New model support as it becomes available
+            </li>
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              Technical support and troubleshooting
+            </li>
+            <li>
+              <span class="price-check"><svg viewBox="0 0 10 8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,4 4,7 9,1"/></svg></span>
+              Compatibility with new harness versions
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pricing-note reveal" style="max-width: 640px;">
+        Additional workflow solutions (Development Workbench, MarketingFlow, Model Selector) can be deployed as part of the initial setup or added later. Pricing for additional solutions is available on request. There are no hidden platform fees, no per-user charges, and no mandatory cloud spend.
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       USE CASES
+  ============================================= -->
+  <section id="use-cases" class="section-pad">
+    <div class="container">
+
+      <div class="reveal" style="max-width: 620px;">
+        <p class="label">Use cases</p>
+        <div class="divider"></div>
+        <h2 class="section-title">What teams actually use it for.</h2>
+        <p class="section-intro" style="margin-top: var(--space-3);">
+          These are the most common operational uses across organizations that have deployed EireneX. Not aspirational — actual.
+        </p>
+      </div>
+
+      <div class="usecases-grid">
+
+        <div class="uc-card reveal reveal-delay-1">
+          <span class="uc-card__icon">💬</span>
+          <div class="uc-card__title">Secure internal AI chat</div>
+          <div class="uc-card__body">Teams run internal AI conversations with confidence that nothing leaves the on-prem environment. Used for research, summarization, and structured Q&A.</div>
+        </div>
+
+        <div class="uc-card reveal reveal-delay-2">
+          <span class="uc-card__icon">🎯</span>
+          <div class="uc-card__title">Prompt-to-model routing</div>
+          <div class="uc-card__body">Complex prompts are routed to capable models; simple tasks use lightweight, low-cost ones. Teams don't need to decide — Model Selector handles it.</div>
+        </div>
+
+        <div class="uc-card reveal reveal-delay-3">
+          <span class="uc-card__icon">📉</span>
+          <div class="uc-card__title">Token and cost management</div>
+          <div class="uc-card__body">Organizations track and reduce token spend across teams. Usage visibility means AI costs stay predictable, not open-ended.</div>
+        </div>
+
+        <div class="uc-card reveal reveal-delay-4">
+          <span class="uc-card__icon">🛠️</span>
+          <div class="uc-card__title">SDLC task support</div>
+          <div class="uc-card__body">Engineering teams use Development Workbench for ticket scoping, documentation, review prep, and structured delivery support throughout the sprint cycle.</div>
+        </div>
+
+        <div class="uc-card reveal reveal-delay-1">
+          <span class="uc-card__icon">⚡</span>
+          <div class="uc-card__title">Engineering workflow acceleration</div>
+          <div class="uc-card__body">Repetitive coding, boilerplate generation, and context packaging for code review — handled faster with AI assistance baked into the workbench.</div>
+        </div>
+
+        <div class="uc-card reveal reveal-delay-2">
+          <span class="uc-card__icon">📣</span>
+          <div class="uc-card__title">Marketing execution support</div>
+          <div class="uc-card__body">Content teams, demand gen, and brand functions use MarketingFlow for first drafts, brief generation, and campaign workflow coordination.</div>
+        </div>
+
+        <div class="uc-card reveal reveal-delay-3">
+          <span class="uc-card__icon">🏢</span>
+          <div class="uc-card__title">Organization-wide AI enablement</div>
+          <div class="uc-card__body">One infrastructure setup powers multiple teams. Each team accesses AI through their relevant workflow solution, all running on the same secure base.</div>
+        </div>
+
+        <div class="uc-card reveal reveal-delay-4">
+          <span class="uc-card__icon">🔐</span>
+          <div class="uc-card__title">Regulated environment deployments</div>
+          <div class="uc-card__body">Teams in regulated sectors deploy AI on-prem with full data control. No external API calls for sensitive prompts. Audit-friendly by design.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FAQ
+  ============================================= -->
+  <section id="faq" class="section-pad">
+    <div class="container">
+
+      <div class="reveal" style="max-width: 560px;">
+        <p class="label">Common questions</p>
+        <div class="divider"></div>
+        <h2 class="section-title">What people ask before they start.</h2>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-q">Do we need GPUs to get started?</div>
+          <div class="faq-a">Not for basic setups. Many EireneX deployments run on standard workstation hardware. For lightweight configurations, even a MacBook is sufficient to run a local model. GPU-based setups are available for higher-performance requirements, but they're not a prerequisite to beginning.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-q">Can this run fully on-prem?</div>
+          <div class="faq-a">Yes. On-prem deployment is a core part of the EireneX design, not a bolt-on. The infrastructure layer, local model hosting, and Model Selector chat layer are all designed to operate inside your environment without requiring external connectivity for sensitive workloads.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-q">Is our data kept secure?</div>
+          <div class="faq-a">When deployed on-prem, your data doesn't leave your environment. Model Selector's routing logic decides which prompts, if any, are appropriate to send to external APIs — and that logic can be configured to never allow external routing for sensitive data categories.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-q">What models do you support?</div>
+          <div class="faq-a">EireneX supports 119+ models, including Llama, Mistral, Gemma, Phi, Qwen, DeepSeek, GPT-4o, Claude, and Gemini, among others. Both local and API-based models are supported. We'll recommend the right configuration based on your workload and infrastructure.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-q">Can we start with just one solution?</div>
+          <div class="faq-a">Yes. The $1,000 setup covers one solution deployment. You can start with whichever one addresses your most immediate need — Model Selector, Development Workbench, or MarketingFlow — and expand from there as teams see value.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-q">Is this only useful for developers and IT teams?</div>
+          <div class="faq-a">No. While the infrastructure setup involves technical work, the solutions built on top of it are designed for everyday use by engineering teams, marketing teams, and operations functions. MarketingFlow, for example, requires no technical knowledge to operate.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-q">How long does the initial setup take?</div>
+          <div class="faq-a">Setup timelines vary by environment complexity, but a standard deployment typically completes within a few days. We handle the configuration; your team's involvement is limited to access provisioning and a walkthrough session at handoff.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-q">What happens after setup — are we on our own?</div>
+          <div class="faq-a">The $19/month recurring cost covers ongoing support, updates, and compatibility maintenance. You're not left to manage a complex system alone. As the model ecosystem evolves, we keep your setup current without requiring a re-engagement each time.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CONTACT / CTA
+  ============================================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="reveal">
+          <p class="label" style="color: rgba(255,255,255,.35); letter-spacing: .12em;">Get started</p>
+          <h2 class="contact-tagline">
+            Ready to start<br />with something <em>practical?</em>
+          </h2>
+          <p class="contact-desc">
+            We don't need a long discovery process to begin. Tell us your environment, your immediate use case, and your data requirements — and we'll walk you through a setup that fits.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:hello@eirenex.io" class="btn-white">Send us a message</a>
+            <a href="#how-it-works" class="btn-ghost">Review how it works</a>
+          </div>
+
+          <div style="margin-top: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2);">
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #4ade80; flex-shrink:0;"></div>
+              <span style="font-size: var(--size-sm); color: rgba(255,255,255,.45);">$1,000 one-time setup — no surprise costs</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #4ade80; flex-shrink:0;"></div>
+              <span style="font-size: var(--size-sm); color: rgba(255,255,255,.45);">On-prem capable from day one</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #4ade80; flex-shrink:0;"></div>
+              <span style="font-size: var(--size-sm); color: rgba(255,255,255,.45);">No GPU required for standard deployments</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: #4ade80; flex-shrink:0;"></div>
+              <span style="font-size: var(--size-sm); color: rgba(255,255,255,.45);">Start with one solution, expand later</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-area reveal reveal-delay-2">
+          <div class="form-title">Start the conversation</div>
+
+          <div class="form-group">
+            <label for="f-name">Your name</label>
+            <input id="f-name" type="text" placeholder="Name" autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="f-email">Work email</label>
+            <input id="f-email" type="email" placeholder="you@company.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="f-org">Organization</label>
+            <input id="f-org" type="text" placeholder="Company name" autocomplete="organization" />
+          </div>
+
+          <div class="form-group">
+            <label for="f-interest">Primary interest</label>
+            <select id="f-interest">
+              <option value="" disabled selected>Select a solution</option>
+              <option value="model-selector">Model Selector — Secure AI chat and routing</option>
+              <option value="dev-workbench">Development Workbench — Engineering and SDLC</option>
+              <option value="marketingflow">MarketingFlow — Marketing operations</option>
+              <option value="full-cohort">Full EireneX cohort</option>
+              <option value="not-sure">Not sure yet — need guidance</option>
+            </select>
+          </div>
+
+          <button class="form-submit" type="button" onclick="handleFormSubmit(this)">
+            Send message
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Eirene<span>X</span></div>
+        <div class="footer-copy">© 2025 EireneX. Enterprise AI.</div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="#overview">Overview</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script>
+    // ---- Navbar scroll behavior ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+
+    // ---- Mobile hamburger ----
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        mobileNav.classList.toggle('open');
+      }
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+      });
+    });
+
+
+    // ---- Scroll reveal ----
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => observer.observe(el));
+
+
+    // ---- Smooth anchor scroll ----
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 72; // nav height + small buffer
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+
+    // ---- Form submit handler ----
+    function handleFormSubmit(btn) {
+      btn.textContent = 'Message sent — we\'ll be in touch.';
+      btn.disabled = true;
+      btn.style.opacity = '.6';
+      btn.style.cursor = 'default';
+    }
+  </script>
+
+</body>
+</html>
