@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<!-- saved from url=(1559)https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&Expires=1779772578 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EireneX — Enterprise AI Enablement</title>
+  <meta name="description" content="EireneX is an enterprise AI enablement layer. Practical, secure, lightweight AI infrastructure and workflows — without the heavy transformation project.">
+
+  <!-- Google Fonts: Cormorant Garamond (display) + DM Mono (accents) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./EireneX — Enterprise AI Enablement_files/css2" rel="stylesheet">
+
+  <style>
+    /* ===================================================
+       CSS VARIABLES — Edit brand here
+    =================================================== */
+    :root {
+      --bg:           #F7F5F0;        /* warm off-white */
+      --bg-alt:       #EFECE5;        /* section divider */
+      --ink:          #1A1916;        /* near-black */
+      --ink-mid:      #4A4740;        /* secondary text */
+      --ink-light:    #8A8680;        /* tertiary / muted */
+      --teal:         #1D6A6A;        /* primary accent */
+      --teal-light:   #D4EAEA;        /* tint */
+      --teal-dark:    #124848;        /* hover */
+      --rule:         #D8D3C8;        /* dividers */
+      --white:        #FFFFFF;
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --font-mono:    'DM Mono', 'Courier New', monospace;
+
+      --max-w:        1160px;
+      --section-pad:  96px 24px;
+      --radius:       4px;
+
+      --transition:   0.22s ease;
+    }
+
+    /* ===================================================
+       RESET & BASE
+    =================================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===================================================
+       TYPOGRAPHY SCALE
+    =================================================== */
+    .display {
+      font-family: var(--font-display);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+    .mono { font-family: var(--font-mono); }
+
+    /* ===================================================
+       STICKY NAVBAR
+    =================================================== */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(247, 245, 240, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule);
+      transition: box-shadow var(--transition);
+    }
+    #navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .nav-logo span { color: var(--teal); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--teal); }
+
+    .nav-cta {
+      background: var(--ink);
+      color: var(--bg) !important;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      transition: background var(--transition) !important;
+    }
+    .nav-cta:hover { background: var(--teal) !important; color: var(--white) !important; }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+      transition: var(--transition);
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: var(--bg);
+      border-top: 1px solid var(--rule);
+      padding: 12px 24px 20px;
+    }
+    .mobile-menu a {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    /* ===================================================
+       HERO SECTION
+    =================================================== */
+    #hero {
+      padding: 160px 24px 96px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .hero-label .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.7); }
+    }
+    .hero-headline {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      margin-bottom: 24px;
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--teal);
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--ink-mid);
+      max-width: 440px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background var(--transition), transform var(--transition);
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      border: 1px solid var(--rule);
+      color: var(--ink-mid);
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: border-color var(--transition), color var(--transition);
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--teal); color: var(--teal); }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .proof-item::before {
+      content: '✓';
+      color: var(--teal);
+      font-size: 0.78rem;
+    }
+
+    /* Hero visual side */
+    .hero-visual {
+      position: relative;
+    }
+    .hero-image-frame {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.09);
+      aspect-ratio: 4/3;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Placeholder shown if image not loaded */
+    .img-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink-light);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 24px;
+    }
+    .img-placeholder .icon {
+      width: 48px; height: 48px;
+      border: 1px solid var(--rule);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .hero-tag {
+      position: absolute;
+      bottom: -16px; left: -16px;
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      white-space: nowrap;
+    }
+    .hero-tag strong { color: var(--teal); }
+
+    /* ===================================================
+       TRUST STRIP
+    =================================================== */
+    .trust-strip {
+      background: var(--ink);
+      padding: 14px 24px;
+    }
+    .trust-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow: hidden;
+    }
+    .trust-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      white-space: nowrap;
+      padding-right: 24px;
+      border-right: 1px solid #333;
+      margin-right: 24px;
+      flex-shrink: 0;
+    }
+    .trust-items {
+      display: flex;
+      gap: 36px;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+    .trust-item {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      color: #7a7570;
+      white-space: nowrap;
+      transition: color var(--transition);
+    }
+    .trust-item:hover { color: var(--teal-light); }
+
+    /* ===================================================
+       SECTION UTILITY
+    =================================================== */
+    .section {
+      padding: var(--section-pad);
+    }
+    .section-alt { background: var(--bg-alt); }
+    .section-dark {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .section-header {
+      margin-bottom: 64px;
+    }
+    .section-header .eyebrow { margin-bottom: 16px; }
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-bottom: 20px;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--ink-mid);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+    .section-dark .section-sub { color: #8A8680; }
+
+    hr.rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 0;
+    }
+
+    /* ===================================================
+       PROBLEM SECTION
+    =================================================== */
+    #problem .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .problem-card {
+      background: var(--bg);
+      padding: 40px 36px;
+      position: relative;
+    }
+    .problem-card .number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 400;
+      color: var(--rule);
+      line-height: 1;
+      margin-bottom: 20px;
+      transition: color var(--transition);
+    }
+    .problem-card:hover .number { color: var(--teal-light); }
+    .problem-card h3 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+    .problem-card p {
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
+
+    .problem-statement {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .problem-statement blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--ink);
+      border-left: 3px solid var(--teal);
+      padding-left: 28px;
+    }
+    .problem-statement .context {
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+    }
+    .problem-statement .context strong { color: var(--ink); font-weight: 500; }
+
+    /* ===================================================
+       HOW IT WORKS
+    =================================================== */
+    #how-it-works .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      width: 36px; height: 36px;
+      border: 1px solid var(--teal);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--teal);
+      flex-shrink: 0;
+      transition: background var(--transition), color var(--transition);
+    }
+    .step:hover .step-num {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .step-content h3 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      margin-top: 5px;
+    }
+    .step-content p {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
+    .step-content .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+    .tag.dark {
+      background: var(--ink);
+      color: var(--bg-alt);
+    }
+
+    .how-visual {
+      position: relative;
+    }
+    .how-image-frame {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      aspect-ratio: 3/4;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 88px;
+    }
+    .how-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .how-callout {
+      margin-top: 20px;
+      border: 1px solid var(--teal-light);
+      background: var(--teal-light);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+    }
+    .how-callout p {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: var(--teal-dark);
+      line-height: 1.6;
+    }
+
+    /* ===================================================
+       OVERVIEW SECTION
+    =================================================== */
+    #overview .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .overview-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #2a2724;
+      border: 1px solid #2a2724;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+    .overview-stat {
+      background: #1e1c1a;
+      padding: 32px 28px;
+    }
+    .overview-stat .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+    .overview-stat .stat-num span { color: var(--teal-light); }
+    .overview-stat .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .overview-copy p {
+      font-size: 1rem;
+      color: #9A9690;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .overview-copy p strong { color: var(--bg); font-weight: 400; }
+
+    /* ===================================================
+       SOLUTIONS SECTION
+    =================================================== */
+    #solutions .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .solutions-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+    .solutions-image-frame {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      aspect-ratio: 4/3;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .solutions-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .solutions-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .sol-card {
+      background: var(--white);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      transition: background var(--transition);
+    }
+    .sol-card:hover { background: var(--bg); }
+    .sol-icon {
+      width: 40px; height: 40px;
+      border: 1px solid var(--teal-light);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      flex-shrink: 0;
+    }
+    .sol-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .sol-card .sol-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+    .sol-card .sol-desc {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      line-height: 1.65;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    .sol-features {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sol-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
+    .sol-feature::before {
+      content: '→';
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-size: 0.75rem;
+    }
+
+    
+    /* ===================================================
+       PRICING SECTION
+    =================================================== */
+    #pricing .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.2fr;
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .price-cell {
+      background: var(--white);
+      padding: 48px 40px;
+    }
+    .price-cell.featured {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .price-cell .price-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 20px;
+    }
+    .price-cell.featured .price-label { color: rgba(255,255,255,0.6); }
+    .price-cell .price-amount {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .price-cell .price-freq {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-mid);
+      margin-bottom: 28px;
+    }
+    .price-cell.featured .price-freq { color: rgba(255,255,255,0.7); }
+    .price-cell p {
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+    .price-cell.featured p { color: rgba(255,255,255,0.85); }
+    .price-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .price-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
+    .price-list li::before {
+      content: '✓';
+      color: var(--teal);
+      flex-shrink: 0;
+    }
+    .price-cell.featured .price-list li { color: rgba(255,255,255,0.85); }
+    .price-cell.featured .price-list li::before { color: rgba(255,255,255,0.8); }
+    .price-note {
+      margin-top: 28px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+    .price-cell.featured .price-note { color: rgba(255,255,255,0.55); }
+
+    /* ===================================================
+       FAQ SECTION
+    =================================================== */
+    #faq .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 80px;
+      margin-top: 56px;
+    }
+    .faq-item {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--rule);
+      cursor: pointer;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--rule); }
+    .faq-item:nth-child(2) { border-top: 1px solid var(--rule); }
+    .faq-q {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .faq-q h3 {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .faq-toggle {
+      width: 20px; height: 20px;
+      border: 1px solid var(--rule);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      transition: var(--transition);
+      margin-top: 2px;
+    }
+    .faq-item.open .faq-toggle {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--white);
+      transform: rotate(45deg);
+    }
+    .faq-a {
+      display: none;
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      margin-top: 14px;
+      padding-right: 40px;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ===================================================
+       CONTACT SECTION
+    =================================================== */
+    #contact {
+      background: var(--ink);
+      color: var(--bg);
+      padding: var(--section-pad);
+      text-align: center;
+    }
+    #contact .section-title { color: var(--white); }
+    #contact .section-sub { color: #8A8680; margin: 0 auto 48px; }
+
+    .contact-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--ink);
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+      display: inline-block;
+    }
+    .btn-white:hover { background: var(--teal-light); color: var(--teal-dark); transform: translateY(-1px); }
+    .btn-ghost {
+      border: 1px solid #3a3835;
+      color: #8A8680;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: border-color var(--transition), color var(--transition);
+      display: inline-block;
+    }
+    .btn-ghost:hover { border-color: var(--teal-light); color: var(--teal-light); }
+
+    .contact-detail {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: #4A4740;
+    }
+    .contact-detail a { color: var(--teal-light); transition: color var(--transition); }
+    .contact-detail a:hover { color: var(--white); }
+
+    /* ===================================================
+       FOOTER
+    =================================================== */
+    footer {
+      background: #0E0D0C;
+      padding: 28px 24px;
+      border-top: 1px solid #1e1c1a;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #4A4740;
+    }
+    .footer-logo span { color: var(--teal); }
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      color: #3A3835;
+    }
+
+    /* ===================================================
+       ANIMATIONS
+    =================================================== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===================================================
+       RESPONSIVE
+    =================================================== */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero-headline { font-size: 2.4rem; }
+
+      .problem-grid { grid-template-columns: 1fr; }
+      .problem-statement { grid-template-columns: 1fr; gap: 32px; }
+
+      #how-it-works .inner { grid-template-columns: 1fr; }
+      .how-image-frame { position: static; aspect-ratio: 16/9; }
+
+      #overview .inner { grid-template-columns: 1fr; gap: 48px; }
+      .overview-stat-row { grid-template-columns: 1fr; }
+
+      .solutions-intro { grid-template-columns: 1fr; }
+      .solutions-cards { grid-template-columns: 1fr; }
+
+      .stack-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .pricing-grid { grid-template-columns: 1fr; }
+
+      .faq-grid { grid-template-columns: 1fr; }
+      .faq-item:nth-child(2) { border-top: none; }
+
+      .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      :root { --section-pad: 64px 20px; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; }
+      .stack-grid { grid-template-columns: 1fr; }
+      .contact-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================================================
+       NAVBAR
+  =================================================== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#hero" class="nav-logo">Eirene<span>X</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#overview">Overview</a></li>
+        <li><a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#how-it-works">How it Works</a></li>
+        <li><a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#solutions">Solutions</a></li>
+     
+        <li><a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#pricing">Pricing</a></li>
+        <li><a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#faq">FAQ</a></li>
+        <li><a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- Mobile toggle -->
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#overview" role="menuitem">Overview</a>
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#how-it-works" role="menuitem">How it Works</a>
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#solutions" role="menuitem">Solutions</a>
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#stack" role="menuitem">Stack</a>
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#pricing" role="menuitem">Pricing</a>
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#faq" role="menuitem">FAQ</a>
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#contact" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- ===================================================
+       HERO
+  =================================================== -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <!-- Left: Copy -->
+      <div class="hero-copy">
+        <div class="hero-label">
+          <div class="dot" aria-hidden="true"></div>
+          <span class="eyebrow">Enterprise AI</span>
+        </div>
+
+        <h1 class="display hero-headline">
+          AI workflows <br>
+          made <em>practical</em>
+        </h1>
+
+        <p class="hero-sub">
+          EireneX helps organizations set up practical AI infrastructure and deploy useful workflows — without a heavy transformation project, expensive GPU clusters, or months of consulting.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#contact" class="btn-primary">Request a Call</a>
+          <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#solutions" class="btn-secondary">See the Solutions</a>
+        </div>
+
+        <div class="hero-proof">
+          <span class="proof-item">On-prem capable</span>
+          <span class="proof-item">119+ models supported</span>
+          <span class="proof-item">No GPU required</span>
+          <span class="proof-item">Predictable cost</span>
+        </div>
+      </div>
+
+      <!-- Right: Visual
+           ================================================
+           IMAGE PLACEHOLDER — Image 1
+           Replace the .img-placeholder div with:
+           <img src="your-image-1.jpg" alt="Developer team working alongside AI tools" />
+           ================================================ -->
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <div class="img-placeholder">
+            <div class="icon">🖥</div>
+            <div>
+              <strong>Image 1</strong><br>
+              Developer/team environment with AI companions at real workstations<br>
+              <em>Replace src in &lt;img&gt; tag to activate</em>
+            </div>
+          </div>
+          <!-- Uncomment and update src when image is ready:
+          <img src="./image-1-team-workflow.jpg" alt="Developer team working alongside AI tools at their workstations" />
+          -->
+        </div>
+        <div class="hero-tag" aria-hidden="true">
+          <strong>AI in the workflow</strong> — not above it
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Trust strip -->
+  <div class="trust-strip" aria-label="Supported tools and environments">
+    <div class="trust-inner">
+      
+      <div class="trust-items">
+        <span class="trust-item">CloudCode</span>
+        <span class="trust-item">Codex</span>
+        <span class="trust-item">OpenCode</span>
+        <span class="trust-item">On-Prem Models</span>
+        <span class="trust-item">Local Inference</span>
+        <span class="trust-item">Open-Source Tooling</span>
+        <span class="trust-item">119+ Models</span>
+        <span class="trust-item">lightweight setup</span>
+      </div>
+    </div>
+  </div>
+  <hr class="rule">
+
+
+  <!-- ===================================================
+       PROBLEM
+  =================================================== -->
+  <section id="problem" class="section fade-up" aria-labelledby="problem-title">
+    <div class="inner">
+      <div class="section-header">
+        <p class="eyebrow">The Reality</p>
+        <h2 class="display section-title" id="problem-title">
+          Most enterprise AI adoption<br>stalls before it starts
+        </h2>
+              </div>
+
+      <div class="problem-grid" role="list">
+
+        <div class="problem-card" role="listitem">
+          <div class="number" aria-hidden="true">01</div>
+          <h3>AI initiatives turns into a transformation project</h3>
+               </div>
+
+        <div class="problem-card" role="listitem">
+          <div class="number" aria-hidden="true">02</div>
+          <h3>Infrastructure requirements gets overstated</h3>
+                 </div>
+
+        <div class="problem-card" role="listitem">
+          <div class="number" aria-hidden="true">03</div>
+          <h3>Security and data control becomes the bottleneck</h3>
+          
+        </div>
+
+        <div class="problem-card" role="listitem">
+          <div class="number" aria-hidden="true">04</div>
+          <h3>Model choices create confusion</h3>
+                  </div>
+
+        <div class="problem-card" role="listitem">
+          <div class="number" aria-hidden="true">05</div>
+          <h3>Tooling is often disconnected</h3>
+                  </div>
+
+        <div class="problem-card" role="listitem">
+          <div class="number" aria-hidden="true">06</div>
+          <h3>Teams end up doing nothing</h3>
+                  </div>
+
+      </div>
+
+      <div class="problem-statement">
+        <blockquote>
+          "The question was never whether to use AI. It was whether we could do it
+          without blowing up the budget or the security posture."
+        </blockquote>
+        <div class="context">
+          <p>
+            <strong>This is the gap EireneX was built to close.</strong> Not by
+            simplifying AI until it's useless.
+     
+           The
+            infrastructure should grow alongside actual usage, not ahead of it.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <hr class="rule">
+
+
+  <!-- ===================================================
+       HOW IT WORKS
+  =================================================== -->
+  <section id="how-it-works" class="section section-alt fade-up" aria-labelledby="how-title">
+    <div class="inner">
+
+      <!-- Steps (left) -->
+      <div>
+        <div class="section-header">
+          <p class="eyebrow">The Process</p>
+          <h2 class="display section-title" id="how-title">
+            From setup to<br>daily use, in steps
+          </h2>
+          <p class="section-sub">
+            EireneX gives you a structured path to AI automation.
+          </p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num" aria-label="Step 1">01</div>
+            <div class="step-content">
+              <h3>Set up the base environment</h3>
+              <p>
+                We configure a lightweight AI environment suited to your setup. No dedicated
+                GPU farm required to get started.
+              </p>
+              <div class="tag-row" aria-label="Technologies">
+                <span class="tag">On-prem</span>
+                <span class="tag">Local inference</span>
+                <span class="tag">No GPU required (basic)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num" aria-label="Step 2">02</div>
+            <div class="step-content">
+              <h3>Connect the right models and tools</h3>
+              <p>
+                We connect your environment to the model catalogue with 119+ options
+                across open, closed, and on-prem deployable models. The right
+                model is matched to the right workload.              </p>
+              <div class="tag-row" aria-label="Tools">
+                <span class="tag">CloudCode</span>
+                <span class="tag">Codex</span>
+                <span class="tag">OpenCode</span>
+                <span class="tag">119+ models</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num" aria-label="Step 3">03</div>
+            <div class="step-content">
+              <h3>Deploy useful workflows</h3>
+              <p>
+                We configure the EireneX solutions relevant to your teams;
+                secure chat, development automation, or marketing workflow support.
+                           </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num" aria-label="Step 4">04</div>
+            <div class="step-content">
+              <h3>Start using AI in daily work</h3>
+              <p>
+                Teams adopt the tools inside existing workflows. AI becomes part of how engineering, marketing,
+                and operations already operate.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Visual (right)
+           ================================================
+           IMAGE PLACEHOLDER — Image 1 (secondary use)
+           This is where Image 1 also fits as a workflow visual.
+           Replace the .img-placeholder div with:
+           <img src="your-image-1.jpg" alt="AI sitting alongside real team workflows" />
+           ================================================ -->
+      <div class="how-visual">
+        <div class="how-image-frame">
+          <div class="img-placeholder">
+            <div class="icon">👥</div>
+            <div>
+              <strong>Image 1</strong><br>
+              AI companions at team workstations<br>
+              <em>"AI that works alongside your team"</em>
+            </div>
+          </div>
+          <!-- Uncomment and update src when image is ready:
+          <img src="./image-1-team-workflow.jpg" alt="Developer team with AI integrated into daily workflow" />
+          -->
+        </div>
+        <div class="how-callout">
+          <p>
+            AI adoption should feel operational, not experimental.
+            EireneX brings secure AI into daily workflows — where
+            the work already happens.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <hr class="rule">
+
+
+  <!-- ===================================================
+       OVERVIEW (dark section)
+  =================================================== -->
+  <section id="overview" class="section section-dark fade-up" aria-labelledby="overview-title">
+    <div class="inner">
+
+      <div>
+        <p class="eyebrow">What EireneX Is</p>
+        <h2 class="display section-title" id="overview-title">
+          An enablement layer,<br>not another tool
+        </h2>
+
+        <div class="overview-stat-row" aria-label="Platform statistics">
+          <div class="overview-stat">
+            <div class="stat-num"><span>119</span>+</div>
+            <div class="stat-label">Models supported</div>
+          </div>
+          <div class="overview-stat">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Solutions under one setup</div>
+          </div>
+          <div class="overview-stat">
+            <div class="stat-num"><span>Fixed</span></div>
+            <div class="stat-label">Recurring monthly cost</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overview-copy">
+        <p>
+          EireneX is the umbrella that provides the infrastructure, the model
+          connections, and the workflow layer that sits underneath everything
+          your teams actually use.
+        </p>
+        
+        <p>
+          The platform is designed to scale without demanding that you overbuild.
+          Start with one team, one workflow, one department. The foundation
+          supports expansion — on your schedule, at your pace.
+        </p>
+              </div>
+
+    </div>
+  </section>
+  <hr class="rule">
+
+
+  <!-- ===================================================
+       SOLUTIONS
+  =================================================== -->
+  <section id="solutions" class="section fade-up" aria-labelledby="solutions-title">
+    <div class="inner">
+
+      <!-- Intro: copy + Image 2 -->
+      <div class="solutions-intro">
+        <div>
+          <div class="section-header">
+            <p class="eyebrow">The Solutions</p>
+            <h2 class="display section-title" id="solutions-title">
+              One setup.<br>Multiple teams.
+            </h2>
+            <p class="section-sub">
+              Under the EireneX platform are production-ready solutions.
+              Each addresses a specific function. All share the same secure
+              infrastructure.
+            </p>
+          </div>
+        </div>
+
+        <!-- ================================================
+             IMAGE PLACEHOLDER — Image 2
+             This image shows team clusters / roles.
+             Replace the .img-placeholder div with:
+             <img src="your-image-2.jpg" alt="Different team roles enabled by one AI setup" />
+             ================================================ -->
+        <div class="solutions-image-frame" aria-label="Team enablement visual">
+          <div class="img-placeholder">
+            <div class="icon">🏢</div>
+            <div>
+              <strong>Image 2</strong><br>
+              Team clusters and roles — structured, department-level view<br>
+              <em>"One AI setup, multiple team workflows"</em>
+            </div>
+          </div>
+          <!-- Uncomment and update src when image is ready:
+          <img src="./image-2-team-roles.jpg" alt="Different team clusters enabled by one EireneX AI setup" />
+          -->
+        </div>
+      </div>
+
+      <!-- Solutions Cards -->
+      <div class="solutions-cards">
+
+        <!-- Solution 1: Model Selector -->
+        <article class="sol-card" aria-labelledby="sol1-title">
+          <div class="sol-icon" aria-hidden="true">🔒</div>
+          <h3 class="display" id="sol1-title">Model Selector</h3>
+          <p class="sol-tagline">Secure &amp; affordable Models for enterprise teams</p>
+          <p class="sol-desc">
+            Gives teams a secure, on-premises chat environment where internal
+            data stays internal. It manages token usage, recommends the best
+            model for each type of prompt, and minimises unnecessary cost.       
+        </p></article>
+
+        <!-- Solution 2: Development Workbench -->
+        <article class="sol-card" aria-labelledby="sol2-title">
+          <div class="sol-icon" aria-hidden="true">⚙️</div>
+          <h3 class="display" id="sol2-title">Development Workbench</h3>
+          <p class="sol-tagline">AI-powered SDLC automation for engineering teams</p>
+          <p class="sol-desc">
+            Built for engineering and delivery teams that need to move faster
+            without adding headcount. Development Workbench fits directly
+            into existing SDLC workflows and automates the repeatable parts.          </p>
+        
+        </article>
+
+        <!-- Solution 3: MarketingFlow -->
+        <article class="sol-card" aria-labelledby="sol3-title">
+          <div class="sol-icon" aria-hidden="true">📊</div>
+          <h3 class="display" id="sol3-title">MarketingFlow</h3>
+          <p class="sol-tagline">Structured AI support for marketing operations</p>
+          <p class="sol-desc">
+            Marketing teams spend significant time on repeatable work: briefs,
+            reviews, approvals, reporting, copy variation. MarketingFlow
+            structures AI support around actual marketing operations          </p>
+                  </article>
+
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
+
+
+    <!-- ===================================================
+       PRICING
+  =================================================== -->
+  <section id="pricing" class="section fade-up" aria-labelledby="pricing-title">
+    <div class="inner">
+      <div class="section-header">
+        <p class="eyebrow">Simple Pricing</p>
+        <h2 class="display section-title" id="pricing-title">
+          Start small.<br>Expand as needed.
+        </h2>
+        <p class="section-sub">
+          There are no tiers to decode, no annual commitments hidden in
+          the footnotes, and no infrastructure costs to estimate. The
+          pricing is direct.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="price-cell">
+          <div class="price-label">One-time</div>
+          <div class="price-amount" aria-label="One thousand dollars">$1,000</div>
+          <div class="price-freq">Setup fee · paid once</div>
+          <p>
+            Covers full environment configuration, model connectivity,
+            solution deployment, and handover. You walk away with a
+            working, documented AI setup — not a pilot deck.
+          </p>
+          <ul class="price-list" aria-label="Setup includes">
+            <li>Environment and infrastructure setup</li>
+            <li>Model catalogue connection (119+ models)</li>
+            <li>On-prem configuration where required</li>
+            <li>Solutions deployment and testing</li>
+            <li>Handover documentation and walkthrough</li>
+          </ul>
+        </div>
+
+        <div class="price-cell featured" aria-label="Recurring plan">
+          <div class="price-label">Monthly · recurring</div>
+          <div class="price-amount" aria-label="Nineteen dollars">$19</div>
+          <div class="price-freq">per month · no lock-in</div>
+          <p>
+            Keeps your environment maintained, supported, and current.
+            Model updates, tooling compatibility, and access to new
+            solutions as they become available.
+          </p>
+          <ul class="price-list" aria-label="Recurring includes">
+            <li>Environment maintenance and updates</li>
+            <li>Model catalogue updates</li>
+            <li>Tooling compatibility patches</li>
+            <li>Access to new solutions</li>
+            <li>Support via documented channels</li>
+          </ul>
+         
+        </div>
+
+        <div class="price-cell">
+          <div class="price-label">How to think about it</div>
+          <div style="padding-top: 8px;">
+            <p style="margin-bottom: 20px;">
+              <strong style="font-weight: 500;">Start with setup.</strong>
+              Configure the environment, connect the models, deploy one or more
+              solutions. Your team starts using AI in actual workflows — not
+              demo environments.
+            </p>
+            <p style="margin-bottom: 20px;">
+              <strong style="font-weight: 500;">Keep it running for $19/month.</strong>
+              No infrastructure cost assumptions. No per-seat pricing that
+              scales painfully as the team grows. A flat, predictable cost
+              for a maintained foundation.
+            </p>
+            <p>
+              <strong style="font-weight: 500;">Expand into more solutions over time.</strong>
+              The solutions under EireneX are designed to be adopted
+              progressively; engineering first, then marketing, then
+              operations. Or all at once. Your choice.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
+
+
+  <!-- ===================================================
+       FAQ
+  =================================================== -->
+  <section id="faq" class="section section-alt fade-up" aria-labelledby="faq-title">
+    <div class="inner">
+      <div class="section-header">
+        <p class="eyebrow">Common Questions</p>
+        <h2 class="display section-title" id="faq-title">
+          Practical answers<br>to real concerns
+        </h2>
+      </div>
+
+      <div class="faq-grid">
+
+        <!-- Column 1 -->
+        <div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q1" tabindex="0">
+            <div class="faq-q" id="faq-q1">
+              <h3>Do we need GPU infrastructure to use EireneX?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              No. For basic and many intermediate setups, EireneX can run without
+              dedicated GPU hardware. A capable MacBook or standard server is
+              sufficient to get started. If your workloads grow to require
+              GPU-accelerated local inference, we can support that path — but
+              it is never a starting requirement.
+            </p>
+          </div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q2" tabindex="0">
+            <div class="faq-q" id="faq-q2">
+              <h3>Can this run on-premises?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              Yes. On-prem deployment is supported across all three EireneX
+              solutions. Model Selector specifically includes an on-prem model
+              option for fully internal, air-gapped chat environments. If your
+              security posture requires data never to leave your infrastructure,
+              we configure accordingly.
+            </p>
+          </div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q3" tabindex="0">
+            <div class="faq-q" id="faq-q3">
+              <h3>Is our data secure?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              Security is a design consideration, not a feature layer. The on-prem
+              configuration ensures sensitive data doesn't flow through external
+              APIs unless you explicitly choose that. Token management, prompt
+              routing, and model selection are all configurable within your
+              security boundaries. We do not store your data.
+            </p>
+          </div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q4" tabindex="0">
+            <div class="faq-q" id="faq-q4">
+              <h3>What models do you support?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              EireneX connects to 119+ models across open-source, proprietary,
+              and locally-deployable options. These include models suited for
+              code generation, document work, structured output, summarisation,
+              and more. Model Selector helps route each prompt to the
+              appropriate model rather than defaulting to one expensive option
+              for all tasks.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q5" tabindex="0">
+            <div class="faq-q" id="faq-q5">
+              <h3>Can we start with just one solution?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              Yes, and that's how most organizations begin. The $1,000 setup
+              includes the base environment and whichever solution is most
+              relevant to start. The other solutions can be added progressively —
+              same infrastructure, no additional setup cost.
+            </p>
+          </div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q6" tabindex="0">
+            <div class="faq-q" id="faq-q6">
+              <h3>Is this only for developer teams?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              No. Development Workbench serves engineering and delivery teams.
+              MarketingFlow serves marketing functions. Model Selector serves
+              any team that needs secure AI chat. EireneX is designed to enable
+              multiple departments from one foundation — not just engineering.
+            </p>
+          </div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q7" tabindex="0">
+            <div class="faq-q" id="faq-q7">
+              <h3>How long does setup take?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              Setup timelines depend on your environment and the number of
+              solutions being deployed. A single-solution setup on a standard
+              environment typically completes within a few days. We provide
+              a documented handover so your team can operate the setup
+              independently after the initial configuration.
+            </p>
+          </div>
+
+          <div class="faq-item" role="region" aria-labelledby="faq-q8" tabindex="0">
+            <div class="faq-q" id="faq-q8">
+              <h3>What if we already have some AI tooling in place?</h3>
+              <div class="faq-toggle" aria-hidden="true">+</div>
+            </div>
+            <p class="faq-a">
+              EireneX is built on open and practical tooling, which means it
+              can often sit alongside or connect to what you already have.
+              During the setup call, we review your current environment and
+              design the configuration around it — we don't require you to
+              replace what works.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
+
+
+  <!-- ===================================================
+       CONTACT / FINAL CTA
+  =================================================== -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 class="display section-title" id="contact-title">
+      Ready to take up<br>the next step?
+    </h2>
+    <p class="section-sub">
+      A setup call takes 30 minutes. We'll review your environment,
+      identify the right starting point, and scope a configuration
+      that fits your team.
+    </p>
+
+    <div class="contact-actions">
+      <a href="mailto:hello@eirenex.io" class="btn-white">Request a Call</a>
+      <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/85873268/c90e6952-6b93-4467-8dff-1c509d328e1e/eirenex-1.html?AWSAccessKeyId=ASIA2F3EMEYEXDUXLYWH&amp;Signature=AJkZdRdV%2BNCOGFnyrrKTOpIIvwE%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDILmf3S%2F1t3fw%2Brn56qU9G0%2FwvqUf7FR9Hx7TsHxq5PAiBJs8zFb0RlHO%2BEKeLlIZOxH9%2F8EddaVHMgbh04w11YRCrzBAh2EAEaDDY5OTc1MzMwOTcwNSIMO3Qmi7JXuQuYPTdsKtAEg1VP5TyHz8uXGLjLG3dcQ%2FWpJPqt8yr%2F28z4TFc4N2GhARTYi4HTw61H5twF3wDkcdQlX03%2FPzHR4Uz6%2FDCRcEle5FH6JGkXJKw1lWDg6kfiNluGmgopr3Odk1s8I%2FSlq%2BDjQkHK0XL1Iru9pz3a1dLwrEZIh1mhduv1G%2B9GTMl0xMSTQoiMzA9Q3ip0VMOx9muRCfKZpYCTv7An64y%2F0LBcayufNOOVvr9Fs8CclbahFpyMM5ZNxlKa2d832Knwk1dL1k0kB9Fg8%2FFe7n3a5UjMJUEwUM0FlbCymp6QebBgWN8mnSfypFw6mFElFkoWI7WPTnBN7T7S2rDuo1smoCNE%2FPzGiwLug0nd0KK2kFGz3P%2Bo1uGDZFT3X4BdYB4poFvm%2BLe3UbT2dINlTnn2OliBpp%2BZSyGMcI3sMm1RVeIQ5rsNsRGHPb81FUMu2RdBftfDYAuwnqIVBoSw%2Fg5WhsoEyWLWJAgSnNNLmXE1Vm1AHxtWeZS6A3u44LoEaBUi1Hw2xJUp%2B2Ty05XfE9%2FCZZmkK%2FsF%2Fr2pxYT7oKxso%2FWnulmZqq3oS%2BB%2BI8p%2F%2Bp2Pz9JV1jTIoEruzAjoJUpYReGflJIzoSlkwEoG3HSNX6iMO1oi0mI%2FlxZLZXH5rHAoZQNRnzW%2Btx0yc15s6lwL5%2FUHDhtOyxJbS1RlKMAxGJHwjc69QVx3WzXang0R8gvVHeRu59pv0f0LE5r8DSoipYnqw563Ciqt3se%2FzSJSrhjJozMpgYKqRZuSHn%2F3e7wPDAL%2F%2BvO1uMAOmKmQQu6mBDDB1dTQBjqZATZJOIV9kJQAFLPfLsHoM%2B3OcxbsOsi9nJlaVWfqjvIrY92D5z%2BEOt95Q3iMBiU4xSgn29GRRw4G6Pk6doxrI7PGPWmrFTbSg9ZunssmeZB2WKJ%2FzqJfDfQlOxPZE7FQpZn33Z4potnPnkkix9YWjqvwQ0Jlya57P5X7sjg%2FcL3%2F85%2Fn54rIYKBKIoRU9lxMjUoT9vYbIZaEiA%3D%3D&amp;Expires=1779772578#solutions" class="btn-ghost">Review the Solutions</a>
+    </div>
+
+    <p class="contact-detail">
+      Or reach us directly at
+      <a href="mailto:hello@eirenex.io">harsh.kumar@galaxywebslinks.com</a>
+    </p>
+  </section>
+
+
+  <!-- ===================================================
+       FOOTER
+  =================================================== -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">Eirene<span>X</span></span>
+      <span class="footer-copy">
+        © 2025 EireneX. Enterprise AI Enablement.
+      </span>
+    </div>
+  </footer>
+
+
+  <!-- ===================================================
+       JAVASCRIPT
+  =================================================== -->
+  <script>
+    /* -----------------------------------------------
+       Navbar: scroll shadow + mobile toggle
+    ----------------------------------------------- */
+    const navbar    = document.getElementById('navbar');
+    const toggle    = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let menuOpen    = false;
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    toggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      toggle.setAttribute('aria-expanded', menuOpen);
+      mobileMenu.style.display = menuOpen ? 'flex' : 'none';
+      mobileMenu.setAttribute('aria-hidden', !menuOpen);
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        toggle.setAttribute('aria-expanded', false);
+        mobileMenu.style.display = 'none';
+        mobileMenu.setAttribute('aria-hidden', true);
+      });
+    });
+
+
+    /* -----------------------------------------------
+       FAQ accordion
+    ----------------------------------------------- */
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Toggle clicked
+        if (!isOpen) item.classList.add('open');
+      });
+
+      // Keyboard support
+      item.setAttribute('tabindex', '0');
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+
+
+    /* -----------------------------------------------
+       Intersection Observer: fade-up sections
+    ----------------------------------------------- */
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+
+    /* -----------------------------------------------
+       Active nav link highlight on scroll
+    ----------------------------------------------- */
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.style.color = '';
+            if (link.getAttribute('href') === `#${id}`) {
+              link.style.color = 'var(--teal)';
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    sections.forEach(section => sectionObserver.observe(section));
+  </script>
+
+
+
+</body></html>
